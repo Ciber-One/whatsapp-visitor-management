@@ -7,6 +7,7 @@ import os
 import io
 import csv
 import random
+import secrets
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field
@@ -512,7 +513,7 @@ async def create_pass(body: PassCreate):
     expiry_min = settings["pin_expiry_minutes"] if settings else 60
     created = now_utc()
     expiry = created + timedelta(minutes=expiry_min)
-    pin = f"{random.randint(0, 9999):04d}"
+    pin = f"{secrets.randbelow(10000):04d}"
     timeline = [
         {"label": "Pass Generated", "actor": res["name"], "timestamp": iso(created)},
         {"label": "Sent To Resident", "actor": "WhatsApp Bot",
