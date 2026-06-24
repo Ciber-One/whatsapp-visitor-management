@@ -1,0 +1,110 @@
+{
+  "project_name": "VisitorGuard Admin Portal",
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast adapted for Enterprise SaaS)",
+  "design_philosophy": "Clean layouts, massive whitespace, soft shadows, neutral colors, minimal animations, professional typography, enterprise feel (Stripe/Vercel styling principles). Progressive disclosure of complex data.",
+  "colors": {
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "border": "#E2E8F0",
+    "primary": "#0F172A",
+    "secondary": "#475569",
+    "success": "#16A34A",
+    "warning": "#F59E0B",
+    "danger": "#DC2626",
+    "text": "#111827",
+    "muted_text": "#64748B"
+  },
+  "typography": {
+    "font_family": "Inter, sans-serif",
+    "h1_page_title": {
+      "size": "32px",
+      "weight": "700",
+      "line_height": "1.2",
+      "tracking": "tracking-tight",
+      "tailwind_classes": "text-[32px] font-bold leading-tight tracking-tight text-[#111827]"
+    },
+    "h2_section_title": {
+      "size": "20px",
+      "weight": "600",
+      "line_height": "1.4",
+      "tailwind_classes": "text-[20px] font-semibold text-[#111827]"
+    },
+    "kpi_value": {
+      "size": "28px",
+      "weight": "700",
+      "line_height": "1.1",
+      "tailwind_classes": "text-[28px] font-bold tracking-tighter text-[#111827]"
+    },
+    "body": {
+      "size": "14px to 16px",
+      "tailwind_classes": "text-[14px] leading-relaxed text-[#475569]"
+    }
+  },
+  "spacing_and_layout": {
+    "scale": [8, 12, 16, 24, 32],
+    "sidebar": "w-[280px] bg-[#FFFFFF] border-r border-[#E2E8F0] h-screen fixed left-0 top-0 hidden lg:flex flex-col",
+    "top_navigation": "h-[72px] bg-[#FFFFFF] border-b border-[#E2E8F0] sticky top-0 z-40 flex items-center px-8 lg:ml-[280px]",
+    "main_content": "min-h-screen bg-[#F8FAFC] lg:pl-[280px] pt-[72px]",
+    "corner_radius": "rounded-[12px]",
+    "grid_system": "The Control Room Grid (Bento style). Base grid: grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6.",
+    "page_container": "max-w-7xl mx-auto p-6 md:p-8"
+  },
+  "components": {
+    "cards": "bg-[#FFFFFF] rounded-[12px] border border-[#E2E8F0] shadow-sm overflow-hidden",
+    "buttons": {
+      "primary": "bg-[#0F172A] text-white px-4 py-2 rounded-[12px] font-medium hover:bg-[#111827] transition-all shadow-sm focus:ring-2 focus:ring-[#0F172A]/20",
+      "secondary": "bg-[#FFFFFF] text-[#0F172A] border border-[#E2E8F0] px-4 py-2 rounded-[12px] font-medium hover:bg-[#F8FAFC] transition-colors focus:ring-2 focus:ring-[#E2E8F0]"
+    },
+    "inputs": "bg-[#FFFFFF] border border-[#E2E8F0] text-[#111827] rounded-[12px] px-3 py-2 placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#0F172A]/20 focus:border-[#0F172A]",
+    "badges": {
+      "active": "bg-[#16A34A]/10 text-[#16A34A] border-none px-2.5 py-0.5 rounded-full text-xs font-semibold",
+      "used": "bg-[#475569]/10 text-[#475569] border-none px-2.5 py-0.5 rounded-full text-xs font-semibold",
+      "expired": "bg-[#F59E0B]/10 text-[#F59E0B] border-none px-2.5 py-0.5 rounded-full text-xs font-semibold",
+      "revoked": "bg-[#DC2626]/10 text-[#DC2626] border-none px-2.5 py-0.5 rounded-full text-xs font-semibold"
+    },
+    "tables": "w-full text-left text-sm text-[#475569]. Headers: text-[#64748B] font-medium border-b border-[#E2E8F0] pb-3. Rows: border-b border-[#E2E8F0] last:border-0 hover:bg-[#F8FAFC]/50 transition-colors."
+  },
+  "visual_enhancers": {
+    "shadows": "Ambient diffuse shadows. Default: shadow-[0_1px_2px_rgba(15,23,42,0.04)]",
+    "borders": "1px solid #E2E8F0 everywhere for structural definition (tables, cards, inputs)",
+    "glassmorphism": "AVOID. Use solid white (#FFFFFF) backgrounds for dropdowns, drawers, and modals with strong drop shadows.",
+    "animations": "Minimal. Use standard 200ms ease-in-out for hover states and subtle fade-in for modals/drawers."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use stroke-width 2 or 1.5. Keep sizes 16px to 20px for inline icons. Use #64748B for neutral icons, primary colors for active states."
+  },
+  "accessibility": {
+    "testing_attributes": "All interactive elements MUST include `data-testid` (e.g., `data-testid=\"add-resident-button\"`)",
+    "focus_states": "High contrast focus rings required on all inputs and buttons. focus:ring-2 focus:ring-offset-1 focus:ring-[#0F172A]",
+    "contrast": "Ensure text colors against backgrounds meet at least AA standard."
+  },
+  "image_urls": {
+    "empty_state_illustration": {
+      "url": "https://images.unsplash.com/photo-1612637968894-660373e23b03?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjByZXNpZGVudGlhbCUyMGFwYXJ0bWVudCUyMGJ1aWxkaW5nJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzgyMzA3NTQ5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern apartment building exterior. Use as a stylistic header or empty state background image."
+    },
+    "auth_background": {
+      "url": "https://images.pexels.com/photos/35339499/pexels-photo-35339499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Minimalist apartment building against blue sky. Perfect for the login/auth split-screen background."
+    },
+    "security_abstract": {
+      "url": "https://images.unsplash.com/photo-1561233835-f937539b95b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBhYnN0cmFjdCUyMHNlY3VyaXR5JTIwZGF0YXxlbnwwfHx8fDE3ODIzMDc1NDl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional abstract security data visualization. Use in the Settings or Logs header area if needed."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the provided color hex codes. Do NOT use default Tailwind colors (e.g., bg-blue-500). Use custom arbitrary values like bg-[#0F172A] or define them in tailwind.config.js.",
+    "Implement the layout with a sticky 280px sidebar and a 72px top nav on desktop.",
+    "On mobile, the sidebar should collapse into a hamburger menu (Sheet component from shadcn).",
+    "Use standard HTML structure and Shadcn UI components. Ensure all components use the rounded-[12px] radius instead of shadcn's default.",
+    "Implement the 'Expiring Soon' widget and KPI cards using the bento grid system.",
+    "For tables, implement responsive containers (overflow-x-auto) so they don't break the layout on smaller screens.",
+    "The Guard Verification page needs a HUGE, centered PIN input (consider using an OTP input component or large text fields).",
+    "Add data-testid attributes to ALL buttons, inputs, links, and table rows.",
+    "Replace standard loading spinners with Skeleton loaders for tables and dashboards.",
+    "Use Lucide-React for icons, stick to sizes 16-24px max.",
+    "Avoid glassmorphism. Avoid excessive gradients. Adhere strictly to the clean, enterprise Stripe/Vercel aesthetic."
+  ]
+}
